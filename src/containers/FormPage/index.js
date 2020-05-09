@@ -1,46 +1,20 @@
 import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import MainContainer from '../../components/styles/MainContainer';
+import Typography from '@material-ui/core/Typography';
 
-export default function FormPage(props){
+export default function FormPage(props) {
     return (
         <div>
-            <form>
-                <fieldset>
-                    <input></input>
-                    <legend>
-                        Nome
-                    </legend>
-                </fieldset>
-
-                <fieldset>
-                    <input></input>
-                    <legend>
-                        E-mail
-                    </legend>
-                </fieldset>
-
-                <fieldset>
-                    <input></input>
-                    <legend>
-                        Nascimento
-                    </legend>
-                </fieldset>
-
-                <fieldset>
-                    <input></input>
-                    <legend>
-                        CPF
-                    </legend>
-                </fieldset>
-
-                <fieldset>
-                    <input></input>
-                    <legend>
-                        Telefone
-                    </legend>
-                </fieldset>
-            </form>
-
-            <button>Enviar</button>
+            <MainContainer>
+                <Typography>Preencher dados:</Typography>
+                <TextField id="outlined-basic" label="Nome" variant="outlined" />
+                <TextField id="outlined-basic" label="E-mail" variant="outlined" />
+                <TextField id="outlined-basic" label="Nascimento" variant="outlined" />
+                <TextField id="outlined-basic" label="CPF" variant="outlined" />
+                <TextField id="outlined-basic" label="Telefone" variant="outlined" />
+                <button>Enviar</button>
+            </MainContainer>
         </div>
     )
 }
