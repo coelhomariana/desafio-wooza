@@ -41,7 +41,7 @@ export default class PlanPage extends React.Component {
             return (
                 <MainContainer>
                     <Typography>Selecionar plano:</Typography>
-                        {this.state.plans.map((plan) => <PlatformCard franquia={plan.franquia} valor={plan.valor} ativo={plan.ativo} onClick={()=> this.selectPlan(plan.sku)}></PlatformCard>)}
+                    {this.state.plans.map((plan) => <PlatformCard franquia={plan.franquia} valor={plan.valor} ativo={plan.ativo} onClick={() => this.selectPlan(plan.sku)}></PlatformCard>)}
                 </MainContainer>
             )
         }

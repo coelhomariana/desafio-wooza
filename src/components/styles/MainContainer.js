@@ -10,7 +10,7 @@ const MainContainer = styled.div`
     margin: auto;
     margin-top: 100px;
     border: 1px solid #909090;
-    border-radius: 1em;    
+    border-radius: 1em;   
 `
 
 export default MainContainer;

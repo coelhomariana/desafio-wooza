@@ -36,6 +36,7 @@ export default class FormPage extends React.Component {
         CPF: ${this.state.cpf}
         Telefone: ${this.state.phone}
         `)
+        window.alert("Dados enviados!")
     }
 
 

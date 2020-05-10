@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-// import CircularProgress from '@material-ui/core/CircularProgress';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Button from '@material-ui/core/Button';
 import MainContainer from '../../components/styles/MainContainer';
@@ -50,16 +49,16 @@ export default class PlatformPage extends React.Component {
                 <MainContainer>
                     <LinearProgress></LinearProgress>
                 </MainContainer>
-                
+
 
             )
         } else {
             return (
                 <MainContainer>
-                        <Typography variant="h6">Selecionar plataforma:</Typography>
-                        <Button variant="contained" color="primary" onClick={() => this.selectPlatform("TBT01")}>Tablets</Button>
-                        <Button variant="contained" color="primary" onClick={() => this.selectPlatform("CPT02")}>Computador</Button>
-                        <Button variant="contained" color="primary" onClick={() => this.selectPlatform("WF03")}>Wi-fi</Button>
+                    <Typography variant="h6">Selecionar plataforma:</Typography>
+                    <Button variant="contained" color="primary" onClick={() => this.selectPlatform("TBT01")}>Tablets</Button>
+                    <Button variant="contained" color="primary" onClick={() => this.selectPlatform("CPT02")}>Computador</Button>
+                    <Button variant="contained" color="primary" onClick={() => this.selectPlatform("WF03")}>Wi-fi</Button>
                 </MainContainer>
             )
         }
