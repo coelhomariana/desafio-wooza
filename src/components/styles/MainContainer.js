@@ -5,6 +5,7 @@ const MainContainer = styled.div`
     flex-direction: column;
     text-align: center;
     width: 20%;
-` 
+    margin: auto;
+`
 
 export default MainContainer;

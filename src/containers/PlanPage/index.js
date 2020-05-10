@@ -2,7 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import { CircularProgress } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import SimpleCard from '../../components/PlatformCard';
+import PlatformCard from '../../components/PlatformCard';
+import PlanContainer from '../../components/styles/PlanContainer';
+import MainContainer from '../../components/styles/MainContainer';
 
 export default class PlanPage extends React.Component {
     constructor(props) {
@@ -37,9 +39,12 @@ export default class PlanPage extends React.Component {
             )
         } else {
             return (
-                <div>
-                    {this.state.plans.map((plan) => <SimpleCard key={plan.sku} onClick={this.selectPlan}>{plan.franquia}</SimpleCard>)}
-                </div>
+                <MainContainer>
+                    <Typography>Selecionar plano:</Typography>
+                    <PlanContainer>
+                        {this.state.plans.map((plan) => <PlatformCard franquia={this.state.plans} onClick={this.selectPlan}></PlatformCard>)}
+                    </PlanContainer>
+                </MainContainer>
             )
         }
 

@@ -2,15 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@material-ui/core/Button';
-import styled from 'styled-components';
-
-const MainContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 20%;
-    border: 1px solid red;
-` 
+import MainContainer from '../../components/styles/MainContainer';
+import Typography from '@material-ui/core/Typography';
 
 export default class PlatformPage extends React.Component {
     constructor(props) {
@@ -38,7 +31,7 @@ export default class PlatformPage extends React.Component {
                     ready: false
                 })
                 console.log('Erro')
-                
+
             }
         }
 
@@ -49,7 +42,7 @@ export default class PlatformPage extends React.Component {
         window.localStorage.setItem('selectedPlatform', id)
         this.props.history.push('/planos')
     }
-    
+
     render() {
         if (this.state.ready === false) {
             return (
@@ -58,6 +51,7 @@ export default class PlatformPage extends React.Component {
         } else {
             return (
                 <MainContainer>
+                    <Typography>Selecionar plataforma:</Typography>
                     <Button variant="contained" color="primary" onClick={() => this.selectPlatform("TBT01")}>Tablets</Button>
                     <Button variant="contained" color="primary" onClick={() => this.selectPlatform("CPT02")}>Computador</Button>
                     <Button variant="contained" color="primary" onClick={() => this.selectPlatform("WF03")}>Wi-fi</Button>
