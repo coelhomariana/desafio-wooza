@@ -9,6 +9,7 @@ const MainContainer = styled.div`
     width: 20%;
     margin: auto;
     margin-top: 100px;
+    margin-bottom: 50px;
     border: 1px solid #909090;
     border-radius: 1em;   
 `
