@@ -4,6 +4,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@material-ui/core/Button';
 import MainContainer from '../../components/styles/MainContainer';
 import Typography from '@material-ui/core/Typography';
+import styled from 'styled-components';
 
 export default class PlatformPage extends React.Component {
     constructor(props) {
@@ -47,6 +48,7 @@ export default class PlatformPage extends React.Component {
         if (this.state.ready === false) {
             return (
                 <CircularProgress></CircularProgress>
+
             )
         } else {
             return (
