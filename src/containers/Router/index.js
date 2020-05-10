@@ -1,9 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import PlatformPage from "../PlatformPage";
 import PlanPage from "../PlanPage";
 import FormPage from "../FormPage";
-import ReactDOM from "react-dom";
 import { Switch, Route, Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 

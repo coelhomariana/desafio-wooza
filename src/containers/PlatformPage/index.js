@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import CircularProgress from '@material-ui/core/CircularProgress';
+// import CircularProgress from '@material-ui/core/CircularProgress';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import Button from '@material-ui/core/Button';
 import MainContainer from '../../components/styles/MainContainer';
 import Typography from '@material-ui/core/Typography';
-import styled from 'styled-components';
 
 export default class PlatformPage extends React.Component {
     constructor(props) {
@@ -47,16 +47,19 @@ export default class PlatformPage extends React.Component {
     render() {
         if (this.state.ready === false) {
             return (
-                <CircularProgress></CircularProgress>
+                <MainContainer>
+                    <LinearProgress></LinearProgress>
+                </MainContainer>
+                
 
             )
         } else {
             return (
                 <MainContainer>
-                    <Typography>Selecionar plataforma:</Typography>
-                    <Button variant="contained" color="primary" onClick={() => this.selectPlatform("TBT01")}>Tablets</Button>
-                    <Button variant="contained" color="primary" onClick={() => this.selectPlatform("CPT02")}>Computador</Button>
-                    <Button variant="contained" color="primary" onClick={() => this.selectPlatform("WF03")}>Wi-fi</Button>
+                        <Typography variant="h6">Selecionar plataforma:</Typography>
+                        <Button variant="contained" color="primary" onClick={() => this.selectPlatform("TBT01")}>Tablets</Button>
+                        <Button variant="contained" color="primary" onClick={() => this.selectPlatform("CPT02")}>Computador</Button>
+                        <Button variant="contained" color="primary" onClick={() => this.selectPlatform("WF03")}>Wi-fi</Button>
                 </MainContainer>
             )
         }

@@ -1,10 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { CircularProgress } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
-import PlatformCard from '../../components/PlatformCard';
-import PlanContainer from '../../components/styles/PlanContainer';
+import { Typography, LinearProgress } from '@material-ui/core';
 import MainContainer from '../../components/styles/MainContainer';
+import PlatformCard from '../../components/PlatformCard';
 
 export default class PlanPage extends React.Component {
     constructor(props) {
@@ -27,23 +25,23 @@ export default class PlanPage extends React.Component {
         })
     }
 
-    selectPlan = (event) => {
-        window.localStorage.setItem('selectedPlan', event.target.id)
+    selectPlan = (id) => {
+        window.localStorage.setItem('selectedPlan', id)
         this.props.history.push('/formulario')
     }
 
     render() {
         if (this.state.ready === false) {
             return (
-                <CircularProgress />
+                <MainContainer>
+                    <LinearProgress />
+                </MainContainer>
             )
         } else {
             return (
                 <MainContainer>
                     <Typography>Selecionar plano:</Typography>
-                    <PlanContainer>
-                        {this.state.plans.map((plan) => <PlatformCard franquia={this.state.plans} onClick={this.selectPlan}></PlatformCard>)}
-                    </PlanContainer>
+                        {this.state.plans.map((plan) => <PlatformCard franquia={plan.franquia} valor={plan.valor} ativo={plan.ativo} onClick={()=> this.selectPlan(plan.sku)}></PlatformCard>)}
                 </MainContainer>
             )
         }

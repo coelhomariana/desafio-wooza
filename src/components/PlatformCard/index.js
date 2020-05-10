@@ -10,18 +10,13 @@ import {
 export default function PlatformCard(props) {
 
   return (
-    <Card>
-      <CardContent>
-        <Typography variant="h5" component="h2">
-          Franquia
-        </Typography>
-        <Typography color="textSecondary">
-          Valor 
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Contratar</Button>
-      </CardActions>
-    </Card>
+      <Card>
+        <CardContent>
+          <Typography variant="h5" component="h2">{props.franquia}</Typography>
+          <Typography color="textSecondary">{props.valor}</Typography>
+          <CardActions></CardActions>
+  <Button variant={props.ativo ? "contained" : "disabled"} size="small" onClick={props.onClick}>{props.ativo ? "Contratar" : "Plano indisponível"}</Button>
+        </CardContent>
+      </Card>
   );
 }
