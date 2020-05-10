@@ -39,7 +39,6 @@ export default class FormPage extends React.Component {
         window.alert("Dados enviados!")
     }
 
-
     render() {
         return (
             <div>
@@ -55,5 +54,4 @@ export default class FormPage extends React.Component {
             </div>
         )
     }
-
 }

@@ -6,7 +6,7 @@ const MainContainer = styled.div`
     padding: 20px;
     text-align: center;
     align-items: center;
-    width: 25%;
+    width: 20%;
     margin: auto;
     margin-top: 100px;
     border: 1px solid #909090;

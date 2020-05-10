@@ -56,7 +56,7 @@ export default class PlatformPage extends React.Component {
             return (
                 <MainContainer>
                     <Typography variant="h6">Selecionar plataforma:</Typography>
-                    <Button variant="contained" color="primary" onClick={() => this.selectPlatform("TBT01")}>Tablets</Button>
+                    <Button variant="contained" color="primary" onClick={() => this.selectPlatform("TBT01")}>Tablet</Button>
                     <Button variant="contained" color="primary" onClick={() => this.selectPlatform("CPT02")}>Computador</Button>
                     <Button variant="contained" color="primary" onClick={() => this.selectPlatform("WF03")}>Wi-fi</Button>
                 </MainContainer>

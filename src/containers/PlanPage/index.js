@@ -31,7 +31,7 @@ export default class PlanPage extends React.Component {
     }
 
     render() {
-        if (this.state.ready === false) {
+        if (!this.state.ready) {
             return (
                 <MainContainer>
                     <LinearProgress />
@@ -40,11 +40,10 @@ export default class PlanPage extends React.Component {
         } else {
             return (
                 <MainContainer>
-                    <Typography>Selecionar plano:</Typography>
-                    {this.state.plans.map((plan) => <PlatformCard franquia={plan.franquia} valor={plan.valor} ativo={plan.ativo} onClick={() => this.selectPlan(plan.sku)}></PlatformCard>)}
+                    <Typography variant="h6">Selecionar plano:</Typography>
+                    {this.state.plans.map((plan) => <PlatformCard franquia={plan.franquia} valor={'R$' + plan.valor} ativo={plan.ativo} onClick={() => this.selectPlan(plan.sku)}></PlatformCard>)}
                 </MainContainer>
             )
         }
-
     }
 }
