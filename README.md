@@ -17,6 +17,11 @@ Depois disso, basta abrir o terminal, navegar até o repositório clonado e roda
 1. `npm install` para instalar todas as dependências;
 1. `npm run start` para rodar localmente o projeto
 
+# Próximas features
+- Testes com Jest e Enzyme
+- Validação de cpf/email
+- Melhorar estilos
+
 ## Contato
 Mariana Coelho de Carvalho
 coelhomariana@outlook.com / marianacoelhoneg@gmail.com
